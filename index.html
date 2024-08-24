@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poster Builder</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <!-- Itbee logo -->
+    <link rel="icon" href="/images/itbee-logo.jpeg" type="image/x-icon" />
+  </head>
+
+  <body class="bg-gray-100 p-4 min-h-screen flex flex-col">
+    <div class="flex-1 mx-auto flex flex-col md:flex-row gap-4 h-full w-full">
+      <!-- Left Section -->
+      <div class="w-full md:w-1/2 flex flex-col">
+        <fieldset
+          class="flex-1 border-dashed border border-purple-300 p-4 rounded-lg"
+        >
+          <legend
+            class="bg-white text-lg shadow font-semibold px-2 text-center w-full py-2 rounded-lg"
+          >
+            <div class="flex items-center justify-center gap-2">
+              <img src="/images/component-icon.png" class="w-6 h-6" />
+              Components
+            </div>
+          </legend>
+
+          <div id="items-section" class="mb-4">
+            <h3 class="text-lg font-bold text-center mb-2">Items</h3>
+            <div id="component-buttons" class="flex gap-2">
+              <button
+                id="add-heading"
+                class="w-full rounded shadow pt-2 pb-2.5 font-medium text-sm cursor-pointer bg-yellow-100 text-yellow-500 hover:bg-yellow-200 hover:text-yellow-600 transition duration-300"
+              >
+                Heading
+              </button>
+              <button
+                id="add-image"
+                class="w-full rounded shadow pt-2 pb-2.5 font-medium text-sm cursor-pointer bg-green-100 text-green-500 hover:bg-green-200 hover:text-green-600 transition duration-300"
+              >
+                Image
+              </button>
+              <button
+                id="add-description"
+                class="w-full rounded shadow pt-2 pb-2.5 font-medium text-sm cursor-pointer bg-blue-100 text-blue-500 hover:bg-blue-200 hover:text-blue-600 transition duration-300"
+              >
+                Description
+              </button>
+            </div>
+          </div>
+
+          <div id="form-container" class="space-y-4">
+            <!-- Dynamic form elements will appear here -->
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Right Section -->
+      <div class="w-full lg:w-1/2 flex">
+        <fieldset
+          class="flex-1 border-dashed border border-purple-300 p-4 rounded-lg flex flex-col justify-between"
+        >
+          <legend
+            class="bg-white text-lg shadow font-semibold px-2 text-center w-full py-2 rounded-lg"
+          >
+            <div class="flex items-center justify-center gap-2">
+              <img src="/images/preview-icon.jpg" class="w-7 h-7" />
+              Preview
+            </div>
+          </legend>
+
+          <div id="poster-preview" class="flex-1">
+            <!-- Poster preview will be shown here -->
+          </div>
+
+          <button
+            id="download-poster"
+            class="self-start font-semibold text-sm mt-2"
+          >
+            Download
+          </button>
+        </fieldset>
+      </div>
+    </div>
+
+    <!-- External javascript file -->
+    <script src="script.js"></script>
+    <script src="download.js"></script>
+  </body>
+</html>
